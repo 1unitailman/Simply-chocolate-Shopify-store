@@ -1,0 +1,35 @@
+{{ 'section-start-page.css' | asset_url | stylesheet_tag }}
+
+<section class="start-page">
+  <main class="main">
+    <div class="wrapper">
+      <div class="main__info-text">
+        <h1 class="main__info-title">
+          Treat yourself or a loved one to our finest ingredients for a moment of pure delight!
+        </h1>
+      </div>
+      <div class="main__buttons-group">
+        <button class="main__buttons_item main__buttons_item--orange"><a href="#">Buy now</a></button>
+        <button class="main__buttons_item main__buttons_item--transparent"><a href="#">How it’s made</a></button>
+      </div>
+    </div>
+  </main>
+</section>
+
+{% schema %}
+{
+  "name": "Start page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Slideshow"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Start page"
+    }
+  ]
+}
+{% endschema %}
