@@ -1,29 +1,62 @@
 {{ 'section-start-page.css' | asset_url | stylesheet_tag }}
 
-<section class="start-page">
-  <main class="main">
-    <div class="wrapper">
-      <div class="main__info-text">
-        <h1 class="main__info-title">
-          Treat yourself or a loved one to our finest ingredients for a moment of pure delight!
-        </h1>
-      </div>
-      <div class="main__buttons-group">
-        <button class="main__buttons_item main__buttons_item--orange"><a href="#">Buy now</a></button>
-        <button class="main__buttons_item main__buttons_item--transparent"><a href="#">How it’s made</a></button>
+{%- capture styles -%}
+    --bg-image: url({{ section.settings.background_img | img_url: "master"  }});
+        {% if section.settings.background_img == blank %}
+            --bg-image: url({{ 'bg-start-page.png' | asset_url }});
+     {% endif %}
+{%- endcapture -%}
+
+<div class="main" style="{{ styles | strip_newlines }}">
+  <div class="container">
+    <div class="main-wrapper">
+      <div class="main-wrapper__content">
+        <div class="main__info-text">
+          <h1 class="main__info-title">
+            {{ section.settings.title }}
+          </h1>
+        </div>
+        <div class="main__buttons-group">
+          <button class="main__buttons_item main__buttons_item--orange">
+            <a href="#">{{ 'sections.start-page.btn_buy_now' | t }}</a>
+          </button>
+          <button class="main__buttons_item main__buttons_item--transparent">
+            <a href="#">{{ 'sections.start-page.btn_how_it_made' | t }}</a>
+          </button>
+        </div>
       </div>
     </div>
-  </main>
-</section>
+  </div>
+</div>
+
+{% comment %}
+  <style>
+    .main-wrapper {
+        background-image: url(
+            {% if section.settings.background_img == blank %}
+              {{ 'bg-start-page.png' | asset_url }}
+            {% else %}
+              {{ section.settings.background_img | img_url: "master"}}
+            {% endif %})
+    }
+  </style>
+{% endcomment %}
 
 {% schema %}
 {
   "name": "Start page",
+  "tag": "section",
   "settings": [
     {
-      "type": "text",
-      "id": "text",
-      "label": "Slideshow"
+      "type": "image_picker",
+      "id": "background_img",
+      "label": "Background image"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "Treat yourself or a loved one to our finest ingredients for a moment of pure delight!"
     }
   ],
   "presets": [

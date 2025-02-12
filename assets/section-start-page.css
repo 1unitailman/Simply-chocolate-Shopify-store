@@ -1,19 +1,128 @@
-.start-page {
-    background-image: url('bg-start-page.png');
+/* STYLES */
+
+.main-wrapper {
+	background-image: var(--bg-image);
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius: 30px;
+	padding: 40px;
+	min-height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
 }
-.main {
-}
-.wrapper {
-}
+
 .main__info-text {
+	max-width: 450px;
+	margin-bottom: 32px;
 }
 .main__info-title {
+	font-size: 28px;
+	line-height: 34px;
+	font-weight: 500;
+	color: #ffffff;
 }
 .main__buttons-group {
+	display: flex;
+	gap: 15px;
 }
 .main__buttons_item {
+	font-size: 14px;
+	cursor: pointer;
 }
+
 .main__buttons_item--orange {
+	max-width: 144px;
+	height: 45px;
+	padding: 0 20px;
+	border-radius: 100px;
+	background-color: #fd9222;
+	transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.main__buttons_item--orange:hover {
+	background-color: #ffb347;
+	transform: scale(1.05);
+}
+
+.main__buttons_item--orange a {
+	color: #ffffff;
+	font-weight: 600;
+	text-align: center;
+}
+
 .main__buttons_item--transparent {
+	max-width: 183px;
+	height: 45px;
+	padding: 0 20px;
+	border-radius: 100px;
+	border: 1px solid white;
+	transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.main__buttons_item--transparent:hover {
+	border-color: #fd9222;
+	transform: scale(1.05);
+}
+
+.main__buttons_item--transparent a {
+	color: #ffffff;
+	font-weight: 600;
+	text-align: center;
+}
+
+/* ADAPTIVE */
+
+@media screen and (max-width: 1260px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media screen and (max-width: 989px) {
+	.container {
+		max-width: 720px;
+	}
+	.main-wrapper {
+		background-position: center;
+	}
+}
+
+@media screen and (max-width: 749px) {
+	.container {
+		max-width: 540px;
+	}
+	.main-wrapper {
+		background-position: center;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.container {
+		max-width: 100%;
+	}
+	.main-wrapper {
+		height: 621px;
+		background-position: center;
+	}
+	.main__info-title {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.main-wrapper__content {
+		max-width: 295px;
+		min-height: 205px;
+		margin: 0 auto;
+	}
+	.main__buttons_item--orange {
+		max-width: 120px;
+	}
+	.main__buttons_item--transparent {
+		max-width: 159px;
+	}
+	.main__buttons_item--transparent a {
+		padding: none;
+	}
 }
