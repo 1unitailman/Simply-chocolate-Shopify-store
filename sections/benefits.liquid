@@ -1,0 +1,173 @@
+{{ 'section-benefits.css' | asset_url | stylesheet_tag }}
+
+<div class="benefits">
+  <div class="container">
+    <div class="benefits__content">
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          <div class="benefits__content__col">
+            {% if block.type == 'taste' %}
+              {% if block.settings.taste_img != blank %}
+                <img
+                  class="benefits_content_img"
+                  src="{{ block.settings.taste_img | img_url:master }}"
+                  alt="{{ block.type }}"
+                  width=""
+                  height=""
+                >
+              {% else %}
+                <img
+                  class="benefits_content_img"
+                  src="{{ 'taste.svg' | asset_url }}"
+                  alt="{{ block.type }}"
+                  width=""
+                  height=""
+                >
+              {% endif %}
+              <h2 class="benefits__content__title">
+                {{ block.settings.taste_title }}
+              </h2>
+              <p class="benefits__content_info">
+                {{ block.settings.taste_subtitle }}
+              </p>
+
+            {% elsif block.type == 'price' %}
+              {% if block.settings.price_img != blank %}
+                <img
+                  class="benefits_content_img"
+                  src="{{ block.settings.price_img | img_url:master }}"
+                  alt="{{ block.type }}"
+                  width=""
+                  height=""
+                >
+              {% else %}
+                <img
+                  class="benefits_content_img"
+                  src="{{ 'price.svg' | asset_url }}"
+                  alt="{{ block.type }}"
+                  width=""
+                  height=""
+                >
+              {% endif %}
+              <h2 class="benefits__content__title">
+                {{ block.settings.price_title }}
+              </h2>
+              <p class="benefits__content_info">
+                {{ block.settings.price_subtitle }}
+              </p>
+            {% elsif block.type == 'production' %}
+              {% if block.settings.production_img != blank %}
+                <img
+                  class="benefits_content_img"
+                  src="{{ block.settings.production_img | img_url:master }}"
+                  alt="{{ block.type }}"
+                  width=""
+                  height=""
+                >
+              {% else %}
+                <img
+                  class="benefits_content_img"
+                  src="{{ 'production.svg' | asset_url }}"
+                  alt="{{ block.type }}"
+                  width=""
+                  height=""
+                >
+              {% endif %}
+              <h2 class="benefits__content__title">
+                {{ block.settings.production_title }}
+              </h2>
+              <p class="benefits__content_info">
+                {{ block.settings.production_subtitle }}
+              </p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Benefits",
+  "tag": "section",
+  "settings": [],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "name": "Taste block",
+      "type": "taste",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "taste_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "taste_title",
+          "label": "Title",
+          "default": "Unsurpassed taste"
+        },
+        {
+          "type": "textarea",
+          "id": "taste_subtitle",
+          "label": "Subtitle",
+          "default": "Crafted with the finest quality cocoa beans and a dedication to perfection, each bite is a decadent experience that simply cannot be matched. Savor the richness and complexity of our Unsurpassed Taste and discover a new level of chocolate bliss."
+        }
+      ]
+    },
+    {
+      "name": "Price block",
+      "type": "price",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "price_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "price_title",
+          "label": "Title",
+          "default": "Affordable price"
+        },
+        {
+          "type": "textarea",
+          "id": "price_subtitle",
+          "label": "Subtitle",
+          "default": "Indulge in high-quality chocolate without breaking the bank with Simply Chocolate's selection of affordable treats. Enjoy mouth-watering truffles and velvety chocolate bars without sacrificing taste or quality. Browse our selection and indulge in affordable luxury today."
+        }
+      ]
+    },
+    {
+      "name": "Production block",
+      "type": "production",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "production_img",
+          "label": "Production"
+        },
+        {
+          "type": "text",
+          "id": "production_title",
+          "label": "Title",
+          "default": "Own production"
+        },
+        {
+          "type": "textarea",
+          "id": "production_subtitle",
+          "label": "Subtitle",
+          "default": "We take pride in our own production process, ensuring that every step is carefully crafted to perfection. From selecting the finest ingredients to handcrafting each piece, our attention to detail is evident in every bite."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits"
+    }
+  ]
+}
+{% endschema %}
