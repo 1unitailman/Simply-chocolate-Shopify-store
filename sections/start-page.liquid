@@ -29,19 +29,6 @@
   </div>
 </div>
 
-{% comment %}
-  <style>
-    .main-wrapper {
-        background-image: url(
-            {% if section.settings.background_img == blank %}
-              {{ 'bg-start-page.png' | asset_url }}
-            {% else %}
-              {{ section.settings.background_img | img_url: "master"}}
-            {% endif %})
-    }
-  </style>
-{% endcomment %}
-
 {% schema %}
 {
   "name": "Start page",

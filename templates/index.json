@@ -85,11 +85,46 @@
       "settings": {
         "title": "Treat yourself or a loved one to our finest ingredients for a moment of pure delight!"
       }
+    },
+    "benefits_qqaB7p": {
+      "type": "benefits",
+      "blocks": {
+        "taste_HebFmd": {
+          "type": "taste",
+          "settings": {
+            "taste_title": "Unsurpassed taste",
+            "taste_subtitle": "Crafted with the finest quality cocoa beans and a dedication to perfection, each bite is a decadent experience that simply cannot be matched. Savor the richness and complexity of our Unsurpassed Taste and discover a new level of chocolate bliss."
+          }
+        },
+        "price_BijbfF": {
+          "type": "price",
+          "settings": {
+            "price_title": "Affordable price",
+            "price_subtitle": "Indulge in high-quality chocolate without breaking the bank with Simply Chocolate's selection of affordable treats. Enjoy mouth-watering truffles and velvety chocolate bars without sacrificing taste or quality. Browse our selection and indulge in affordable luxury today."
+          }
+        },
+        "production_Jy6iWT": {
+          "type": "production",
+          "settings": {
+            "production_title": "Own production",
+            "production_subtitle": "We take pride in our own production process, ensuring that every step is carefully crafted to perfection. From selecting the finest ingredients to handcrafting each piece, our attention to detail is evident in every bite."
+          }
+        }
+      },
+      "block_order": [
+        "taste_HebFmd",
+        "price_BijbfF",
+        "production_Jy6iWT"
+      ],
+      "settings": {
+        "color_background": ""
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "start_page_ihQ8iy"
+    "start_page_ihQ8iy",
+    "benefits_qqaB7p"
   ]
 }
