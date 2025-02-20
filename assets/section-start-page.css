@@ -14,7 +14,7 @@
 }
 
 .main__info-text {
-	max-width: 450px;
+	max-width: 484px;
 	margin-bottom: 32px;
 	font-family: Montserrat;
 }
@@ -24,6 +24,7 @@
 	font-weight: 500;
 	color: #ffffff;
 	font-family: Montserrat;
+	letter-spacing: -3%;
 }
 .main__buttons-group {
 	display: flex;
@@ -32,12 +33,11 @@
 .main__buttons_item {
 	font-size: 14px;
 	cursor: pointer;
+	padding: 14px 40px;
 }
 
 .main__buttons_item--orange {
-	max-width: 144px;
 	height: 45px;
-	padding: 0 20px;
 	border-radius: 100px;
 	background-color: #fd9222;
 	transition: background-color 0.3s ease, transform 0.3s ease;
@@ -48,7 +48,7 @@
 	transform: scale(1.05);
 }
 
-.main__buttons_item--orange a {
+.main__buttons_item-link {
 	color: #ffffff;
 	font-weight: 600;
 	text-align: center;
@@ -56,9 +56,7 @@
 }
 
 .main__buttons_item--transparent {
-	max-width: 183px;
 	height: 45px;
-	padding: 0 20px;
 	border-radius: 100px;
 	border: 1px solid white;
 	transition: border-color 0.3s ease, transform 0.3s ease;
@@ -67,13 +65,6 @@
 .main__buttons_item--transparent:hover {
 	border-color: #fd9222;
 	transform: scale(1.05);
-}
-
-.main__buttons_item--transparent a {
-	color: #ffffff;
-	font-weight: 600;
-	text-align: center;
-	font-family: Montserrat;
 }
 
 /* ADAPTIVE */
@@ -105,10 +96,10 @@
 @media screen and (max-width: 576px) {
 	.container {
 		max-width: 100%;
+		padding: 0 15px;
 	}
 	.main-wrapper {
-		height: 621px;
-		background-position: center;
+		max-height: 621px;
 	}
 	.main__info-title {
 		font-size: 20px;
@@ -119,13 +110,8 @@
 		min-height: 205px;
 		margin: 0 auto;
 	}
-	.main__buttons_item--orange {
-		max-width: 120px;
-	}
-	.main__buttons_item--transparent {
-		max-width: 159px;
-	}
-	.main__buttons_item--transparent a {
-		padding: none;
+	.main__buttons_item {
+		padding: 12px 22px;
+		white-space: nowrap;
 	}
 }

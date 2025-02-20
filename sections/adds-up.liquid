@@ -1,0 +1,215 @@
+{{ 'section-adds-up.css' | asset_url | stylesheet_tag }}
+
+<div class="adds-up">
+  <div class="container">
+    <div class="adds-up__content">
+      <div class="text-group">
+        <div class="text-group__title">
+          <h2 class="text-group__title-text">
+            {{ section.settings.title }}
+          </h2>
+        </div>
+        <div class="text-group__subtitle">
+          <p class="text-group__subtitle-text">
+            {{ section.settings.subtitle }}
+          </p>
+        </div>
+      </div>
+      {% if section.blocks.size > 0 %}
+        <div class="adds-up__group">
+          {% for block in section.blocks %}
+            {% if block.type == 'milk-chocolate' %}
+              <div class="adds-up__item adds-up__item--orange">
+                {% if block.settings.milk_chocolate_img != blank %}
+                  <img
+                    src="{{ block.settings.milk_chocolate_img | img_url:master }}"
+                    class="adds-up__img"
+                    alt="{{ block.type }}"
+                    height=""
+                    width=""
+                  >
+                {% else %}
+                  <img
+                    src="{{ 'milk-chocolate.svg' |  asset_url }}"
+                    class="adds-up__img"
+                    alt="{{ block.type }}"
+                    height=""
+                    width=""
+                  >
+                {% endif %}
+                <p class="adds-up__text adds-up__text--white">
+                  {{ block.settings.milk_chocolate_title }}
+                </p>
+              </div>
+            {% elsif block.type == 'milk' %}
+              <div class="adds-up__item adds-up__item--transparent">
+                {% if block.settings.milk_img != blank %}
+                  <img
+                    src="{{ block.settings.milk_img | img_url:master }}"
+                    class="adds-up__img"
+                    alt="{{ block.type }}"
+                    height=""
+                    width=""
+                  >
+                {% else %}
+                  <img
+                    src="{{ 'milk.svg' |  asset_url }}"
+                    class="adds-up__img"
+                    alt=""
+                    height=""
+                    width=""
+                  >
+                {% endif %}
+                <p class="adds-up__text adds-up__text--black">
+                  {{ block.settings.milk_title }}
+                </p>
+              </div>
+            {% elsif block.type == 'nuts' %}
+              <div class="adds-up__item adds-up__item--black">
+                {% if block.settings.nuts_img != blank %}
+                  <img
+                    src="{{ block.settings.nuts_img | img_url:master }}"
+                    class="adds-up__img"
+                    alt=""
+                    height=""
+                    width=""
+                  >
+                {% else %}
+                  <img
+                    src="{{ 'nuts.svg' |  asset_url }}"
+                    class="adds-up__img"
+                    alt="{{ block.type }}"
+                    height=""
+                    width=""
+                  >
+                {% endif %}
+                <p class="adds-up__text adds-up__text--white">
+                  {{ block.settings.nuts_title }}
+                </p>
+              </div>
+            {% elsif block.type == 'semi-sweet' %}
+              <div class="adds-up__item adds-up__item--transparent">
+                {% if block.settings.semi_sweet_img != blank %}
+                  <img
+                    src="{{ block.settings.semi_sweet_img | img_url:master }}"
+                    class="adds-up__img"
+                    alt=""
+                    height=""
+                    width=""
+                  >
+                {% else %}
+                  <img
+                    src="{{ 'semi-sweet-chocolate.svg' |  asset_url }}"
+                    class="adds-up__img"
+                    alt=""
+                    height=""
+                    width=""
+                  >
+                {% endif %}
+                <p class="adds-up__text adds-up__text--black">
+                  {{ block.settings.semi_sweet_title }}
+                </p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Adds up",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title text",
+      "default": "IT ALL ADDS UP TO ONE EXCEPTIONAL TASTE SENSATION"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle text",
+      "default": "At Simply Chocolate, we believe that the secret to exceptional chocolate is in the details. From the sourcing of the finest ingredients to the careful crafting of each individual piece, every step of our process adds up to one exceptional taste sensation."
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Milk chocolate",
+      "type": "milk-chocolate",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "milk_chocolate_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "milk_chocolate_title",
+          "label": "Title",
+          "default": "Milk chocolate"
+        }
+      ]
+    },
+    {
+      "name": "Milk",
+      "type": "milk",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "milk_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "milk_title",
+          "label": "Title",
+          "default": "Milk"
+        }
+      ]
+    },
+    {
+      "name": "Nuts",
+      "type": "nuts",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "nuts_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "nuts_title",
+          "label": "Title",
+          "default": "Nuts"
+        }
+      ]
+    },
+    {
+      "name": "Semi-sweet chocolate",
+      "type": "semi-sweet",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "semi_sweet_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "semi_sweet_title",
+          "label": "Title",
+          "default": "SEMI - SWEET CHOCOLATE"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Adds up"
+    }
+  ]
+}
+{% endschema %}

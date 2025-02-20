@@ -8,114 +8,162 @@
  * ------------------------------------------------------------
  */
 {
-	"sections": {
-		"image_banner": {
-			"type": "image-banner",
-			"blocks": {
-				"heading": {
-					"type": "heading",
-					"disabled": true,
-					"settings": {
-						"heading": "Browse our latest products",
-						"heading_size": "h0"
-					}
-				},
-				"button": {
-					"type": "buttons",
-					"disabled": true,
-					"settings": {
-						"button_label_1": "Shop all",
-						"button_link_1": "shopify://collections/all",
-						"button_style_secondary_1": true,
-						"button_label_2": "",
-						"button_link_2": "",
-						"button_style_secondary_2": false
-					}
-				}
-			},
-			"block_order": ["heading", "button"],
-			"disabled": true,
-			"settings": {
-				"image_overlay_opacity": 40,
-				"image_height": "large",
-				"desktop_content_position": "bottom-center",
-				"show_text_box": false,
-				"desktop_content_alignment": "center",
-				"color_scheme": "scheme-3",
-				"image_behavior": "none",
-				"mobile_content_alignment": "center",
-				"stack_images_on_mobile": false,
-				"show_text_below": false
-			}
-		},
-		"featured_collection": {
-			"type": "featured-collection",
-			"disabled": true,
-			"settings": {
-				"title": "Featured products",
-				"heading_size": "h2",
-				"description": "",
-				"show_description": false,
-				"description_style": "body",
-				"collection": "all",
-				"products_to_show": 8,
-				"columns_desktop": 4,
-				"full_width": false,
-				"show_view_all": true,
-				"view_all_style": "solid",
-				"enable_desktop_slider": false,
-				"color_scheme": "scheme-1",
-				"image_ratio": "adapt",
-				"image_shape": "default",
-				"show_secondary_image": true,
-				"show_vendor": false,
-				"show_rating": false,
-				"quick_add": "none",
-				"columns_mobile": "2",
-				"swipe_on_mobile": false,
-				"padding_top": 44,
-				"padding_bottom": 36
-			}
-		},
-		"start_page_ihQ8iy": {
-			"type": "start-page",
-			"settings": {
-				"title": "Treat yourself or a loved one to our finest ingredients for a moment of pure delight!"
-			}
-		},
-		"benefits_qqaB7p": {
-			"type": "benefits",
-			"blocks": {
-				"taste_HebFmd": {
-					"type": "taste",
-					"settings": {
-						"taste_title": "Unsurpassed taste",
-						"taste_subtitle": "Crafted with the finest quality cocoa beans and a dedication to perfection, each bite is a decadent experience that simply cannot be matched. Savor the richness and complexity of our Unsurpassed Taste and discover a new level of chocolate bliss."
-					}
-				},
-				"price_BijbfF": {
-					"type": "price",
-					"settings": {
-						"price_title": "Affordable price",
-						"price_subtitle": "Indulge in high-quality chocolate without breaking the bank with Simply Chocolate's selection of affordable treats. Enjoy mouth-watering truffles and velvety chocolate bars without sacrificing taste or quality. Browse our selection and indulge in affordable luxury today."
-					}
-				},
-				"production_Jy6iWT": {
-					"type": "production",
-					"settings": {
-						"production_title": "Own production",
-						"production_subtitle": "We take pride in our own production process, ensuring that every step is carefully crafted to perfection. From selecting the finest ingredients to handcrafting each piece, our attention to detail is evident in every bite."
-					}
-				}
-			},
-			"block_order": ["taste_HebFmd", "price_BijbfF", "production_Jy6iWT"],
-			"settings": {}
-		}
-	},
-	"order": [
-		"image_banner",
-		"featured_collection",
-		"start_page_ihQ8iy",
-		"benefits_qqaB7p"
-	]
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "start_page_ihQ8iy": {
+      "type": "start-page",
+      "settings": {
+        "title": "Treat yourself or a loved one to our finest ingredients for a moment of pure delight!"
+      }
+    },
+    "benefits_qqaB7p": {
+      "type": "benefits",
+      "blocks": {
+        "taste_HebFmd": {
+          "type": "taste",
+          "settings": {
+            "taste_title": "Unsurpassed taste",
+            "taste_subtitle": "Crafted with the finest quality cocoa beans and a dedication to perfection, each bite is a decadent experience that simply cannot be matched. Savor the richness and complexity of our Unsurpassed Taste and discover a new level of chocolate bliss."
+          }
+        },
+        "price_BijbfF": {
+          "type": "price",
+          "settings": {
+            "price_title": "Affordable price",
+            "price_subtitle": "Indulge in high-quality chocolate without breaking the bank with Simply Chocolate's selection of affordable treats. Enjoy mouth-watering truffles and velvety chocolate bars without sacrificing taste or quality. Browse our selection and indulge in affordable luxury today."
+          }
+        },
+        "production_Jy6iWT": {
+          "type": "production",
+          "settings": {
+            "production_title": "Own production",
+            "production_subtitle": "We take pride in our own production process, ensuring that every step is carefully crafted to perfection. From selecting the finest ingredients to handcrafting each piece, our attention to detail is evident in every bite."
+          }
+        }
+      },
+      "block_order": [
+        "taste_HebFmd",
+        "price_BijbfF",
+        "production_Jy6iWT"
+      ],
+      "settings": {}
+    },
+    "adds_up_bxgic4": {
+      "type": "adds-up",
+      "blocks": {
+        "milk_chocolate_gNd7FF": {
+          "type": "milk-chocolate",
+          "settings": {
+            "milk_chocolate_title": "Milk chocolate"
+          }
+        },
+        "milk_EHVECe": {
+          "type": "milk",
+          "settings": {
+            "milk_title": "Milk"
+          }
+        },
+        "nuts_diRBFC": {
+          "type": "nuts",
+          "settings": {
+            "nuts_title": "Nuts"
+          }
+        },
+        "semi_sweet_rKVmWU": {
+          "type": "semi-sweet",
+          "disabled": true,
+          "settings": {
+            "semi_sweet_title": "SEMI - SWEET CHOCOLATE"
+          }
+        }
+      },
+      "block_order": [
+        "milk_chocolate_gNd7FF",
+        "milk_EHVECe",
+        "nuts_diRBFC",
+        "semi_sweet_rKVmWU"
+      ],
+      "settings": {
+        "title": "IT ALL ADDS UP TO ONE EXCEPTIONAL <strong>TASTE </strong>SENSATION",
+        "subtitle": "At Simply Chocolate, we believe that the secret to exceptional chocolate is in the details. From the sourcing of the finest ingredients to the careful crafting of each individual piece, every step of our process adds up to one exceptional taste sensation."
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "start_page_ihQ8iy",
+    "benefits_qqaB7p",
+    "adds_up_bxgic4"
+  ]
 }
