@@ -32,7 +32,7 @@
 }
 .adds-up__group {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	justify-content: center;
 	gap: 19px;
 	margin-top: 50px;

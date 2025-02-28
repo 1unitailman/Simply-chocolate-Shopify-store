@@ -1,0 +1,163 @@
+{{ 'how-it-made.css' | asset_url | stylesheet_tag }}
+
+<div class="how-it-made" style="{{ images | strip_newlines }}">
+  <div class="container">
+    <div class="how-it-made__title">
+      <h2 class="how-it-made__title-text">
+        {{ section.settings.title }}
+      </h2>
+    </div>
+    <div class="how-it-made__content">
+      <div class="how-it-made__image">
+        {% if section.settings.image == blank %}
+          <img
+            src="{{ 'made.png' | asset_url }}"
+            alt=""
+            height=""
+            width=""
+          >
+        {% else %}
+          <img
+            src="{{ section.settings.image | img_url: master }}"
+            alt=""
+            height=""
+            width=""
+          >
+        {% endif %}
+      </div>
+      <div class="how-it-made__info">
+        <p class="how-it-made__info-text">
+          {% for block in section.blocks %}
+            {{ block.settings.info_title }}
+          {% endfor %}
+        </p>
+        <ul class="how-it-made__list">
+          {% for block in section.blocks %}
+            {% if block.type == 'paragraph_1' %}
+              <li class="how-it-made__list-item">
+                {{ block.settings.paragraph_1 }}
+              </li>
+            {% elsif block.type == 'paragraph_2' %}
+              <li class="how-it-made__list-item">
+                {{ block.settings.paragraph_2 }}
+              </li>
+            {% elsif block.type == 'paragraph_3' %}
+              <li class="how-it-made__list-item">
+                {{ block.settings.paragraph_3 }}
+              </li>
+            {% elsif block.type == 'paragraph_4' %}
+              <li class="how-it-made__list-item">
+                {{ block.settings.paragraph_4 }}
+              </li>
+            {% elsif block.type == 'paragraph_5' %}
+              <li class="how-it-made__list-item">
+                {{ block.settings.paragraph_5 }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "How it`s made",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "HOW IT’S <strong>MADE?</strong>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "name": "Information title",
+      "type": "info_title",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "info_title",
+          "label": "Information title",
+          "default": "Try our chocolates today and discover the perfect balance of flavor"
+        }
+      ]
+    },
+    {
+      "name": "Paragraph 1",
+      "type": "paragraph_1",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "paragraph_1",
+          "label": "Paragraph 1",
+          "default": "Heat the milk in a saucepan without bringing it to a boil. Add sugar and cocoa powder."
+        }
+      ]
+    },
+    {
+      "name": "Paragraph 2",
+      "type": "paragraph_2",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "paragraph_2",
+          "label": "Paragraph 2",
+          "default": "At the same time, prepare a water bath. Melt the butter on it."
+        }
+      ]
+    },
+    {
+      "name": "Paragraph 3",
+      "type": "paragraph_3",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "paragraph_3",
+          "label": "Paragraph 3",
+          "default": "'Mix' the milk mixture and already liquid butter. Mix thoroughly with a silicone spatula so that the mass becomes uniform and silky."
+        }
+      ]
+    },
+    {
+      "name": "Paragraph 4",
+      "type": "paragraph_4",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "paragraph_4",
+          "label": "Paragraph 4",
+          "default": "Heat the mixture over low heat, letting it barely boil."
+        }
+      ]
+    },
+    {
+      "name": "Paragraph 5",
+      "type": "paragraph_5",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "paragraph_5",
+          "label": "Paragraph 5",
+          "default": "Pour the chocolate into special containers (can be replaced with ice molds). Allow to cool and harden."
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "How it`s made"
+    }
+  ]
+}
+{% endschema %}

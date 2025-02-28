@@ -4,7 +4,7 @@
     --bg-image: url({{ section.settings.background_img | img_url: "master"  }});
         {% if section.settings.background_img == blank %}
             --bg-image: url({{ 'bg-start-page.png' | asset_url }});
-     {% endif %}
+        {% endif %}
 {%- endcapture -%}
 
 <div class="main" style="{{ styles | strip_newlines }}">

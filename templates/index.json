@@ -141,7 +141,6 @@
         },
         "semi_sweet_rKVmWU": {
           "type": "semi-sweet",
-          "disabled": true,
           "settings": {
             "semi_sweet_title": "SEMI - SWEET CHOCOLATE"
           }
@@ -157,6 +156,58 @@
         "title": "IT ALL ADDS UP TO ONE EXCEPTIONAL <strong>TASTE </strong>SENSATION",
         "subtitle": "At Simply Chocolate, we believe that the secret to exceptional chocolate is in the details. From the sourcing of the finest ingredients to the careful crafting of each individual piece, every step of our process adds up to one exceptional taste sensation."
       }
+    },
+    "how_it_made_apMWck": {
+      "type": "how-it-made",
+      "blocks": {
+        "info_title_eMBVwR": {
+          "type": "info_title",
+          "settings": {
+            "info_title": "Try our chocolates today and discover the perfect balance of flavor"
+          }
+        },
+        "paragraph_1_6aKgYW": {
+          "type": "paragraph_1",
+          "settings": {
+            "paragraph_1": "Heat the milk in a saucepan without bringing it to a boil. Add sugar and cocoa powder."
+          }
+        },
+        "paragraph_2_AMhjFa": {
+          "type": "paragraph_2",
+          "settings": {
+            "paragraph_2": "At the same time, prepare a water bath. Melt the butter on it."
+          }
+        },
+        "paragraph_3_3z3jqt": {
+          "type": "paragraph_3",
+          "settings": {
+            "paragraph_3": "'Mix' the milk mixture and already liquid butter. Mix thoroughly with a silicone spatula so that the mass becomes uniform and silky."
+          }
+        },
+        "paragraph_4_PbpERn": {
+          "type": "paragraph_4",
+          "settings": {
+            "paragraph_4": "Heat the mixture over low heat, letting it barely boil."
+          }
+        },
+        "paragraph_5_EY3hdN": {
+          "type": "paragraph_5",
+          "settings": {
+            "paragraph_5": "Pour the chocolate into special containers (can be replaced with ice molds). Allow to cool and harden."
+          }
+        }
+      },
+      "block_order": [
+        "info_title_eMBVwR",
+        "paragraph_1_6aKgYW",
+        "paragraph_2_AMhjFa",
+        "paragraph_3_3z3jqt",
+        "paragraph_4_PbpERn",
+        "paragraph_5_EY3hdN"
+      ],
+      "settings": {
+        "title": "HOW IT’S <strong>MADE?</strong>"
+      }
     }
   },
   "order": [
@@ -164,6 +215,7 @@
     "featured_collection",
     "start_page_ihQ8iy",
     "benefits_qqaB7p",
-    "adds_up_bxgic4"
+    "adds_up_bxgic4",
+    "how_it_made_apMWck"
   ]
 }
